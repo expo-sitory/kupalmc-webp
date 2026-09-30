@@ -72,6 +72,43 @@
          .no-webp .header {background: url('images/background.png') no-repeat;}
          .navbar-bottom .store-link:after, .navbar-bottom .store-link:focus:after, .navbar-top-new .store-link:after, .navbar-top-new .store-link:focus:after {box-shadow: 0px 0px 12px 0px #FA4949}
          .p-image-frame {z-index: 1; opacity: 0.7}
+         .modern-tabs {
+            border-bottom: 1px solid #444;
+            margin-bottom: 1.5rem;
+         }
+         .modern-tabs .nav-item {
+            margin-bottom: -1px;
+         }
+         .modern-tabs .nav-link {
+            color: #aaa !important;
+            background: transparent !important;
+            border: none !important;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: relative;
+            transition: color 0.3s ease;
+         }
+         .modern-tabs .nav-link:hover {
+            color: var(--p-color) !important;
+         }
+         .modern-tabs .nav-link.active {
+            color: var(--p-color) !important;
+         }
+         .modern-tabs .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--p-color);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+         }
+         .modern-tabs .nav-link.active::after {
+            transform: scaleX(1);
+         }
       </style>
    </head>
    <body>
@@ -113,15 +150,10 @@
                   <li class="nav-item">
                      <a class="nav-link" href="/recipes/"><i class="fa-solid fa-hammer"></i> Recipes</a>
                   </li>
-                  <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <li class="nav-item">
+                     <a class="nav-link" href="https://map.kupal.org/" target="_blank">
                         <i class="fa-solid fa-map"></i> Map
                      </a>
-                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="https://luzon.kupal.org/" target="_blank">Luzon</a>
-                        <a class="dropdown-item" href="https://visayas.kupal.org/" target="_blank">Visayas</a>
-                        <a class="dropdown-item" href="https://mindanao.kupal.org/" target="_blank">Mindanao</a>
-                     </div>
                   </li>
                </ul>
             </div>
@@ -197,15 +229,10 @@
                <a class="nav-link" href="/recipes/"><i class="fa-solid fa-hammer"></i>
                Recipes</a>
             </li>
-            <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="#" id="mobileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item">
+               <a class="nav-link" href="https://map.kupal.org/" target="_blank">
                   <i class="fa-solid fa-map"></i> Map
                </a>
-               <div class="dropdown-menu" aria-labelledby="mobileDropdown" style="background: transparent; border: none; padding-left: 1rem;">
-                  <a class="dropdown-item" href="https://luzon.kupal.org/" target="_blank" style="color: var(--p-color);">Luzon</a>
-                  <a class="dropdown-item" href="https://visayas.kupal.org/" target="_blank" style="color: var(--p-color);">Visayas</a>
-                  <a class="dropdown-item" href="https://mindanao.kupal.org/" target="_blank" style="color: var(--p-color);">Mindanao</a>
-               </div>
             </li>
          </ul>
       </div>
@@ -216,7 +243,7 @@
                   <div class="card-header news-header">
                      <div class="news-flex">
                         <div class="news-text">
-                           <a class="news-title">Kupal Mc | Civilization Series</a>
+                           <a class="news-title" style="font-size: 1.8rem; font-weight: 700;">Kupal Mc | Civilization Series</a>
                         </div>    
                      </div>
                   </div>
@@ -224,62 +251,247 @@
                      <!--<p><img src="images/509287191_122104846442912773_8955032317243203535_n.jpg" alt=""></p>
                      <p></p>
                      -->
-                     <div>
+                     <div class="wiki-content mb-4">
+                        <p>Embark on a journey of nation-building inside a sprawling realm built by Kupal Community! This isn't just your typical Minecraft survival server, this is <strong>civilization at scale</strong>, where your choices, alliances, and strategies shape the fate of rising empires. Whether you want to lead a sovereign nation or conquer rival territories, your legacy starts here.</p>
                         
-                        <p><em>Welcome to Season 1!</em></p>
-
-                        <p>Embark on a journey of nation-building across a meticulously crafted 1:40 scale replica of the Philippine archipelago. This is not just Minecraft, this is <strong>civilization at scale</strong>, where your choices shape the fate of empires.</p>
-
-                        <h2>Core Concept</h2>
-                        <p>Build, trade, and thrive as you establish your civilization on one of three major islands:</p>
+                        <h4 class="mt-4">The Grand Vision</h4>
                         <ul>
-                           <li><strong>Luzon</strong></li>
-                           <li><strong>Visayas</strong></li>
-                           <li><strong>Mindanao</strong></li>
+                           <li>Go on an adventure, build, trade, and thrive as you establish your civilization!</li>
+                           <li>Player-driven Economy</li>
+                           <li>Building & Roleplay</li>
+                           <li>Server Politics</li>
+                           <li>No P2W BS</li>
                         </ul>
-                        <p><strong>Twist:</strong> You choose your island, but your ethnicity is assigned randomly upon join. Adapt or perish.</p>
-                        <hr>
-                        <h2>Season 1 Features</h2>
-                        <p></p>
-                        <h5>[ Ethnicity System ]</h5>
-                        <p>Your ethnicity isn't just flavor! it's <em>mechanical</em>.</p>
-                        <ul>
-                           <li><strong>Unique Crafting Recipes</strong> – Each ethnicity unlocks exclusive recipes for nether and end items, forcing specialization and trade</li>
-                           <li><strong>Cultural Traits</strong> – Unique buffs and debuffs shape your gameplay:
-                                 <ul>
-                                    <li>Some ethnicities excel at mining and agriculture</li>
-                                    <li>Others master trade, magic, or warfare</li>
+                     </div>
+
+                     <ul class="nav nav-tabs modern-tabs" id="seasonTabs" role="tablist">
+                        <li class="nav-item">
+                           <a class="nav-link active" id="season2-tab" data-toggle="tab" href="#season2" role="tab" aria-controls="season2" aria-selected="true">Season 2</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" id="season1-tab" data-toggle="tab" href="#season1" role="tab" aria-controls="season1" aria-selected="false">Season 1</a>
+                        </li>
+                     </ul>
+
+                     <div class="tab-content" id="seasonTabsContent">
+                        <!-- Season 2 Tab Content -->
+                        <div class="tab-pane fade show active" id="season2" role="tabpanel" aria-labelledby="season2-tab">
+                           <div class="wiki-content">
+                              <h3 class="mt-2" style="color: var(--p-color);">Welcome to Season 2!</h3>
+                              <p>Step into a world of magic, war, and legend. Explore the continent of Runeterra, where the dust has settled and the map lies empty, ready for your story!</p>
+
+                              <h4 class="mt-4">Key Features</h4>
+                              
+                              <h5 class="mt-3">Pre-determined Country Regions</h5>
+                              <p>Upon joining, players will get assigned randomly to one of 10 countries:<br>
+                              <strong>Demacia, Noxus, Freljord, Piltover, Zaun, Shurima, Targon, Shadow-Isles, Bilgewater & Ionia</strong></p>
+                              <p>Each Country holds exclusive dominion over its starting territories; outsiders may not build or settle there.</p>
+                              
+                              <div class="map-overview text-center my-4 p-3 rounded" style="background-color: rgba(0,0,0,0.2); border: 1px dashed #555;">
+                                 <h5 class="mb-3 text-light">Map Overview</h5>
+                                 <img src="images/borders.png" alt="Map Borders Overview" class="img-fluid rounded shadow" style="max-height: 500px; border: 2px solid var(--p-color);">
+                                 <p class="text-muted mt-2 mb-0 small"><em>Territorial map of the regions</em></p>
+                              </div>
+
+                              <h5 class="mt-4">League of Legends Combat Mechanics</h5>
+                              <ul>
+                                 <li>Attribute Stats</li>
+                                 <li>Leveling</li>
+                                 <li>Runes</li>
+                              </ul>
+
+                              <h5 class="mt-4">Harder Vanilla</h5>
+                              <div class="row mb-3">
+                                 <div class="col-md-6">
+                                    <ul>
+                                       <li>Disabled Food Heals</li>
+                                       <li>Disabled Totems</li>
+                                       <li>Disabled Mace</li>
+                                       <li>Slower Boats</li>
+                                       <li>Horse Stamina</li>
+                                    </ul>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <ul>
+                                       <li>Disabled Minecart</li>
+                                       <li>Disabled Riptide</li>
+                                       <li>Disabled Portal Building</li>
+                                       <li>Disabled End Dimension</li>
+                                    </ul>
+                                 </div>
+                              </div>
+
+                              <hr style="border-color: #444;">
+
+                              <h3 class="mt-4" style="color: #ffaa00;">Combat System</h3>
+                              <p>Every hit is a tiny math problem. HP is counted in half-hearts, so <strong>2 HP = 1 heart</strong>.</p>
+                              
+                              <h5 class="mt-3">Preface</h5>
+                              <ul>
+                                 <li><strong>Attack timer check:</strong> too soon after your last hit? Nothing happens.</li>
+                                 <li>Your power is worked out from class, items, level and runes.</li>
+                                 <li>Enemy defense shrinks the damage.</li>
+                                 <li>Roll for a crit.</li>
+                                 <li>Blocking can soften it, then the enemy loses HP and you may heal from lifesteal.</li>
+                              </ul>
+
+                              <div class="alert alert-info mt-4" role="alert" style="background-color: rgba(224, 124, 255, 0.1); border-left: 4px solid var(--p-color); border-top: none; border-right: none; border-bottom: none; color: #ddd;">
+                                 <h5 class="alert-heading" style="color: var(--p-color);">Note: "is 1 AD equal to 1 Damage?"</h5>
+                                 <p class="mb-0">No. 1 AD &approx; 1/3 damage. The game divides your AD by 3 before using it, then the target's armor shrinks it more <code>(damage &divide; (1 + armor/100))</code>. 1 damage = half a heart.</p>
+                                 <p class="mb-0 mt-2 text-muted"><em>Example: 30 AD = 10 damage vs 0 armor, 5 vs 100 armor, ~3.3 vs 200 armor.</em></p>
+                              </div>
+
+                              <h4 class="mt-4">Stats</h4>
+                              <div class="table-responsive">
+                                 <table class="table table-dark table-striped table-bordered table-sm mb-1" style="font-size: 0.95em;">
+                                    <tbody>
+                                       <tr><td style="width: 15%; text-align: center; color: var(--p-color);"><strong>AD</strong></td><td>Attack Damage: how hard normal hits are</td></tr>
+                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>AP</strong></td><td>Ability Power: magic strength</td></tr>
+                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>HP</strong></td><td>Health: your life bar</td></tr>
+                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>HR</strong></td><td>Health Regen: HP back every 5 seconds</td></tr>
+                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>AR</strong></td><td>Armor: shrinks physical damage</td></tr>
+                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>MR</strong></td><td>Magic Resist: shrinks magic damage</td></tr>
+                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>AS</strong></td><td>Attack Speed: how fast you release an attack</td></tr>
+                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>CC</strong></td><td>Crit Chance: % chance of a crit</td></tr>
+                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>LS</strong></td><td>Lifesteal: heal a % of damage dealt</td></tr>
+                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>Pen</strong></td><td>Penetration: makes enemy armor/MR count for less</td></tr>
+                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>TD</strong></td><td>True Damage: ignores all defenses</td></tr>
+                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>MS</strong></td><td>Move Speed</td></tr>
+                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>CH</strong></td><td>Cooldown Haste</td></tr>
+                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>TN</strong></td><td>Tenacity: shortens slows debuff on you</td></tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <p class="text-muted small"><em>Only your first 6 League items count. Pick your best six.</em></p>
+
+                              <h4 class="mt-4">Classes (starting stats)</h4>
+                              <div class="table-responsive">
+                                 <table class="table table-dark table-bordered table-hover text-center table-sm">
+                                    <thead style="background-color: #222;">
+                                       <tr><th style="color: var(--p-color);">Class</th><th>AD</th><th>AP</th><th>HP</th><th>AR</th><th>MR</th><th>AS</th></tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr><td><strong>Fighter</strong></td><td>12</td><td>4</td><td>0</td><td>10</td><td>15</td><td>medium</td></tr>
+                                       <tr><td><strong>Assassin</strong></td><td>7</td><td>4</td><td>0</td><td>4</td><td>20</td><td>fast</td></tr>
+                                       <tr><td><strong>Mage</strong></td><td>1</td><td>18</td><td>0</td><td>5</td><td>7</td><td>medium</td></tr>
+                                       <tr><td><strong>Marksman</strong></td><td>4</td><td>2</td><td>0</td><td>5</td><td>8</td><td>fastest</td></tr>
+                                       <tr><td><strong>Tank</strong></td><td>1</td><td>2</td><td>10</td><td>25</td><td>15</td><td>very slow</td></tr>
+                                       <tr><td><strong>Support</strong></td><td>11</td><td>10</td><td>4</td><td>5</td><td>5</td><td>slow</td></tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+
+                              <h4 class="mt-4">3 Kinds of Damage</h4>
+                              <ul>
+                                 <li><strong>Physical:</strong> from AD, shrunk by armor</li>
+                                 <li><strong>Magic:</strong> from AP and rune powers, shrunk by MR</li>
+                                 <li><strong>True:</strong> skips all defenses</li>
+                                 <li><strong>Adaptive:</strong> (many runes) turns magic if your items give more AP than AD, otherwise physical. It also grows with league level (&times;1.07 at the start, up to &times;2.75 at level 18).</li>
+                              </ul>
+
+                              <h4 class="mt-4">Armor and Magic Resist</h4>
+                              <p>Defense divides damage:<br>
+                              <code style="color: #ffaa00;">damage taken = damage &divide; (1 + resist &divide; 100)</code><br>
+                              0 resist = all of it, 100 = half, 200 = one third, 300 = one quarter.</p>
+                              <p>Pen goes first: flat pen is subtracted, then % pen cuts what's left.</p>
+
+                              <div class="card bg-dark border-secondary mb-4 mt-3">
+                                 <div class="card-body py-3">
+                                    <h6 class="card-title mb-2" style="color: var(--p-color);">Balancer Values</h6>
+                                    <p class="card-text small mb-0 text-light">This number value may change, and if so it will get announced.<br>
+                                    Player AD/AP Divisor: <strong style="color: #ffaa00;">3.0</strong> <span class="mx-2">|</span> Player AR/MR Multiplier: <strong style="color: #ffaa00;">8.5</strong></p>
+                                 </div>
+                              </div>
+
+                              <h4 class="mt-4">Combat Mechanics</h4>
+                              <ul>
+                                 <li class="mb-2"><strong>Crits:</strong> A crit does 1.75&times; damage and ignores blocking. After a non-crit you get a small bonus (up to +2.5% chance) that fades as crits chain.</li>
+                                 <li class="mb-2"><strong>Attack Speed:</strong> <code>wait in ticks = 20 &divide; AS (20 ticks = 1 second)</code>. Waits with no items: Marksman ~1.2s, Assassin ~1.3s, Fighter ~1.6s, Mage ~1.8s, Support ~5s, Tank ~6.7s. Bows use the same timer.</li>
+                                 <li class="mb-2"><strong>Healing:</strong> Max HP = vanilla + class + item HP + shard HP + 4 per league level. Regen ticks every 5 seconds. <em class="text-warning">Food doesn't heal you.</em> Grievous Wounds cuts all healing, lifesteal and regen to 60%.</li>
+                              </ul>
+
+                              <h4 class="mt-4">Skills</h4>
+                              <ul>
+                                 <li class="mb-2"><strong>Mitigate:</strong> (shield or raised sword) cuts non-crit hits: wood 10%, stone 20%, iron/gold 28%, diamond/netherite 40%, shield 50%.</li>
+                                 <li class="mb-2"><strong>Parry:</strong> right-click a sword just before a hit lands. The hit does nothing, you get Strength II for ~2.5s, and the attacker is knocked back, slowed and weakened for 1.5s. <em style="color: #ffaa00;">Cooldown: 2s on success, 7s on a miss.</em></li>
+                                 <li class="mb-2"><strong>Dash:</strong> jump in mid-air. <em style="color: #ffaa00;">7s cooldown</em>, no fall damage for 3s after.</li>
+                              </ul>
+
+                              <div class="alert alert-secondary mt-4" style="background-color: #1a1a1a; color: #ddd; border: 1px solid #333; border-left: 4px solid #ffaa00;">
+                                 <h5 class="alert-heading" style="color: #ffaa00;"><i class="fa-solid fa-lightbulb"></i> Rules of Thumb</h5>
+                                 <ul class="mb-0 mt-2">
+                                    <li>Armored mob? Use magic or true damage.</li>
+                                    <li>Tough target? Get penetration.</li>
+                                    <li>Slow class? Make every hit count.</li>
+                                    <li>Parry beats a big hit, but a miss costs you 7 seconds.</li>
                                  </ul>
-                           </li>
-                        </ul>
+                              </div>
+                           </div>
+                        </div>
 
-                        <h5>[ Survival Mechanics ]</h5>
-                        <ul>
-                           <li><strong>Nether & End Disabled</strong> – Traditional exploration banned</li>
-                           <li><strong>Ethnicity-Locked Progression</strong> – You <em>must</em> trade with other players to access forbidden resources</li>
-                           <li><strong>Mandatory Interaction</strong> – Solo play won't work; collaboration is survival</li>
-                        </ul>
+                        <!-- Season 1 Tab Content -->
+                        <div class="tab-pane fade" id="season1" role="tabpanel" aria-labelledby="season1-tab">
+                           <div class="wiki-content mt-3">
+                              <h3 class="mt-2" style="color: var(--p-color);">Welcome to Season 1!</h3>
 
-                        <h5>[ Economy & Trading ]</h5>
-                        <p>There is no NPC marketplace. No admin shops. <strong>Only player-driven economy</strong></p>
-                        <ul>
-                           <li>Establish trade routes between islands</li>
-                           <li>Negotiate prices and treaties</li>
-                           <li>Control rare resources through your ethnicity's monopoly</li>
-                           <li>Build wealth through commerce, not grinding</li>
-                        </ul>
+                              <p>Embark on a journey of nation-building across a meticulously crafted 1:40 scale replica of the Philippine archipelago. This is not just Minecraft, this is <strong>civilization at scale</strong>, where your choices shape the fate of empires.</p>
 
-                        <h5>[ Play Style ]</h5>
-                        <ul>
-                           <li>For players who want <em>strategy</em> and <em>roleplay</em></li>
-                           <li>For communities that love <strong>political intrigue</strong> and <strong>negotiation</strong></li>
-                           <li>For those tired of vanilla Minecraft</li>
-                           <li>For builders with a <em>purpose</em>, create to expand your civilization</li>
-                        </ul>
-                        <hr>
-                        <h5>Ready to Build an Empire?</h5>
-                        <p>Join Season 1 and write the history of the Philippine Archipelago. Will your civilization rise, or will it crumble under the weight of resource scarcity and rival nations?</p>
-                        <p><strong>Your story starts now.</strong></p>
+                              <h4 class="mt-4">Core Concept</h4>
+                              <p>Build, trade, and thrive as you establish your civilization on one of three major islands:</p>
+                              <ul>
+                                 <li><strong>Luzon</strong></li>
+                                 <li><strong>Visayas</strong></li>
+                                 <li><strong>Mindanao</strong></li>
+                              </ul>
+                              <p><strong>Twist:</strong> You choose your island, but your ethnicity is assigned randomly upon join. Adapt or perish.</p>
+                              
+                              <hr style="border-color: #444;">
+                              
+                              <h3 class="mt-4">Season 1 Features</h3>
+                              
+                              <h5 class="mt-4">[ Ethnicity System ]</h5>
+                              <p>Your ethnicity isn't just flavor! it's <em>mechanical</em>.</p>
+                              <ul>
+                                 <li><strong>Unique Crafting Recipes</strong> – Each ethnicity unlocks exclusive recipes for nether and end items, forcing specialization and trade</li>
+                                 <li><strong>Cultural Traits</strong> – Unique buffs and debuffs shape your gameplay:
+                                       <ul>
+                                          <li>Some ethnicities excel at mining and agriculture</li>
+                                          <li>Others master trade, magic, or warfare</li>
+                                       </ul>
+                                 </li>
+                              </ul>
+
+                              <h5 class="mt-4">[ Survival Mechanics ]</h5>
+                              <ul>
+                                 <li><strong>Nether & End Disabled</strong> – Traditional exploration banned</li>
+                                 <li><strong>Ethnicity-Locked Progression</strong> – You <em>must</em> trade with other players to access forbidden resources</li>
+                                 <li><strong>Mandatory Interaction</strong> – Solo play won't work; collaboration is survival</li>
+                              </ul>
+
+                              <h5 class="mt-4">[ Economy & Trading ]</h5>
+                              <p>There is no NPC marketplace. No admin shops. <strong>Only player-driven economy</strong></p>
+                              <ul>
+                                 <li>Establish trade routes between islands</li>
+                                 <li>Negotiate prices and treaties</li>
+                                 <li>Control rare resources through your ethnicity's monopoly</li>
+                                 <li>Build wealth through commerce, not grinding</li>
+                              </ul>
+
+                              <h5 class="mt-4">[ Play Style ]</h5>
+                              <ul>
+                                 <li>For players who want <em>strategy</em> and <em>roleplay</em></li>
+                                 <li>For communities that love <strong>political intrigue</strong> and <strong>negotiation</strong></li>
+                                 <li>For those tired of vanilla Minecraft</li>
+                                 <li>For builders with a <em>purpose</em>, create to expand your civilization</li>
+                              </ul>
+                              
+                              <hr style="border-color: #444;">
+                              
+                              <h5 class="mt-4 text-info">Ready to Build an Empire?</h5>
+                              <p>Join Season 1 and write the history of the Philippine Archipelago. Will your civilization rise, or will it crumble under the weight of resource scarcity and rival nations?</p>
+                              <p><strong>Your story starts now.</strong></p>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
