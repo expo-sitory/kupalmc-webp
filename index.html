@@ -109,6 +109,54 @@
          .modern-tabs .nav-link.active::after {
             transform: scaleX(1);
          }
+         
+         /* Modern Wiki Content Styling */
+         .wiki-content h3 {
+            color: var(--p-color) !important;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 2px solid rgba(224, 124, 255, 0.3);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+         }
+         .wiki-content h4 {
+            color: #ffffff !important;
+            font-weight: 600;
+            border-left: 4px solid var(--p-color);
+            padding-left: 12px;
+            margin-top: 1.75rem;
+            margin-bottom: 1rem;
+            padding-top: 4px;
+            padding-bottom: 4px;
+         }
+         .wiki-content h5:not(.alert-heading) {
+            color: #4db8ff !important;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+         }
+         .wiki-content ul:not(.nav) {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 1rem 1rem 1rem 2.5rem;
+            border: 1px solid #333;
+            margin-bottom: 1.5rem;
+         }
+         .wiki-content li {
+            margin-bottom: 0.5rem;
+         }
+         .wiki-content p {
+            line-height: 1.7;
+            color: #ddd;
+         }
+         .wiki-content hr {
+            border-color: #444;
+            margin: 2rem 0;
+         }
       </style>
    </head>
    <body>
@@ -289,8 +337,10 @@
                               
                               <div class="map-overview text-center my-4 p-3 rounded" style="background-color: rgba(0,0,0,0.2); border: 1px dashed #555;">
                                  <h5 class="mb-3 text-light">Map Overview</h5>
-                                 <img src="images/borders.png" alt="Map Borders Overview" class="img-fluid rounded shadow" style="max-height: 500px; border: 2px solid var(--p-color);">
-                                 <p class="text-muted mt-2 mb-0 small"><em>Territorial map of the regions</em></p>
+                                 <a href="images/borders.png" target="_blank" style="display: inline-block; position: relative;">
+                                    <img src="images/borders.png" alt="Map Borders Overview" class="img-fluid rounded shadow" style="max-height: 500px; border: 2px solid var(--p-color); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
+                                 </a>
+                                 <p class="text-muted mt-2 mb-0 small"><em>Territorial map of the regions (Click to enlarge)</em></p>
                               </div>
 
                               <h5 class="mt-4">League of Legends Combat Mechanics</h5>
@@ -335,7 +385,7 @@
                                  <li>Blocking can soften it, then the enemy loses HP and you may heal from lifesteal.</li>
                               </ul>
 
-                              <div class="alert alert-info mt-4" role="alert" style="background-color: rgba(224, 124, 255, 0.1); border-left: 4px solid var(--p-color); border-top: none; border-right: none; border-bottom: none; color: #ddd;">
+                              <div class="alert alert-info mt-4" role="alert" style="background-color: rgba(224, 124, 255, 0.1); border: 1px solid rgba(224, 124, 255, 0.2); border-radius: 8px; color: #ddd;">
                                  <h5 class="alert-heading" style="color: var(--p-color);">Note: "is 1 AD equal to 1 Damage?"</h5>
                                  <p class="mb-0">No. 1 AD &approx; 1/3 damage. The game divides your AD by 3 before using it, then the target's armor shrinks it more <code>(damage &divide; (1 + armor/100))</code>. 1 damage = half a heart.</p>
                                  <p class="mb-0 mt-2 text-muted"><em>Example: 30 AD = 10 damage vs 0 armor, 5 vs 100 armor, ~3.3 vs 200 armor.</em></p>
@@ -417,14 +467,18 @@
                                  <li class="mb-2"><strong>Dash:</strong> jump in mid-air. <em style="color: #ffaa00;">7s cooldown</em>, no fall damage for 3s after.</li>
                               </ul>
 
-                              <div class="alert alert-secondary mt-4" style="background-color: #1a1a1a; color: #ddd; border: 1px solid #333; border-left: 4px solid #ffaa00;">
-                                 <h5 class="alert-heading" style="color: #ffaa00;"><i class="fa-solid fa-lightbulb"></i> Rules of Thumb</h5>
-                                 <ul class="mb-0 mt-2">
-                                    <li>Armored mob? Use magic or true damage.</li>
-                                    <li>Tough target? Get penetration.</li>
-                                    <li>Slow class? Make every hit count.</li>
-                                    <li>Parry beats a big hit, but a miss costs you 7 seconds.</li>
-                                 </ul>
+                              <div class="card mt-4 mb-4" style="background-color: rgba(0, 0, 0, 0.2); border-radius: 8px; border: 1px solid #333;">
+                                 <div class="card-body py-3">
+                                    <h6 class="card-title mb-3 text-white" style="font-weight: 600; font-size: 1.5rem;">
+                                       <i class="fa-solid fa-lightbulb" style="color: #ffaa00;"></i> Rules of Thumb
+                                    </h6>
+                                    <ul class="mb-0 mt-3" style="background-color: transparent; border: none; padding: 0 0 0 1.5rem; margin-bottom: 0;">
+                                       <li>Armored mob? Use magic or true damage.</li>
+                                       <li>Tough target? Get penetration.</li>
+                                       <li>Slow class? Make every hit count.</li>
+                                       <li>Parry beats a big hit, but a miss costs you 7 seconds.</li>
+                                    </ul>
+                                 </div>
                               </div>
                            </div>
                         </div>
