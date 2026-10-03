@@ -396,30 +396,35 @@
                               </div>
 
                               <h4 class="mt-4">Stats</h4>
-                              <p>Sources: class base, vanilla attributes, items, rune shards, temporary modifiers, potions and enchantments.</p>
-                              <div class="table-responsive">
-                                 <table class="table table-dark table-striped table-bordered table-sm mb-1" style="font-size: 0.95em;">
-                                    <tbody>
-                                       <tr><td style="width: 15%; text-align: center; color: var(--p-color);"><strong>AD</strong></td><td>Attack Damage: physical damage</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>AP</strong></td><td>Ability Power: magic damage</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>HP</strong></td><td>Health: bonus max health on top of vanilla 20 (+4 per league level)</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>HR</strong></td><td>Health Regen</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>AR</strong></td><td>Armor: reduces physical damage taken</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>MR</strong></td><td>Magic Resist: reduces magic damage taken</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>AS</strong></td><td>Attack Speed</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>CC</strong></td><td>Crit Chance</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>CSD</strong></td><td>Crit Damage</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>LS</strong></td><td>Life Steal</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>Pen</strong></td><td>Flat and percent armor / magic penetration</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>TD</strong></td><td>True Damage: ignores resistances</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>MS</strong></td><td>Move Speed</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>CH</strong></td><td>Cooldown Haste</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>TN</strong></td><td>Tenacity: shortens slows only</td></tr>
-                                       <tr><td style="text-align: center; color: var(--p-color);"><strong>HM</strong></td><td>Heal Power</td></tr>
-                                    </tbody>
-                                 </table>
-                              </div>
-                              <p class="text-muted small"><em>Only the first 6 league items in your inventory count.</em></p>
+                              <p>Sources: class base, vanilla attributes, items, rune shards, temporary modifiers, potions and enchantments. Only the first 6 league items in your inventory count.</p>
+
+                              <h5 class="mt-3">Defensive</h5>
+                              <ul>
+                                 <li class="mb-2"><strong>Health [HP]:</strong> A player dies when their health is reduced to zero. Bonus health is added on top of the vanilla 20, plus 4 per league level.</li>
+                                 <li class="mb-2"><strong>Health regeneration [HP5]:</strong> The amount of health a player passively restores per 5 seconds.</li>
+                                 <li class="mb-2"><strong>Armor [AR]:</strong> Reduces (mitigates) the amount of physical damage taken, thus increasing your effective health against physical damage.</li>
+                                 <li class="mb-2"><strong>Magic resistance [MR]:</strong> Reduces (mitigates) the amount of magic damage taken, thus increasing your effective health against magic damage.</li>
+                                 <li class="mb-2"><strong>Tenacity:</strong> Reduces the duration of slows by a percentage. No other debuff is affected.</li>
+                              </ul>
+
+                              <h5 class="mt-3">Offensive</h5>
+                              <ul>
+                                 <li class="mb-2"><strong>Attack speed [AS]:</strong> The number of basic attacks you are allowed to perform per second.</li>
+                                 <li class="mb-2"><strong>Attack damage [AD]:</strong> One of the two main offensive statistics, along with ability power. Deals physical damage on basic attacks.</li>
+                                 <li class="mb-2"><strong>Ability power [AP]:</strong> One of the two main offensive statistics, along with attack damage. Deals magic damage.</li>
+                                 <li class="mb-2"><strong>Critical strike chance [Crit%]:</strong> Denotes the chance that a basic attack will critically strike.</li>
+                                 <li class="mb-2"><strong>Critical strike damage:</strong> Increases the damage dealt when a basic attack critically strikes.</li>
+                                 <li class="mb-2"><strong>Armor penetration:</strong> When applying physical damage to an enemy, ignores a part of their armor in the damage calculations. Can be either flat or percentage-based. The target's armor is unchanged.</li>
+                                 <li class="mb-2"><strong>Magic penetration:</strong> When applying magic damage to an enemy, ignores a part of their magic resistance in the damage calculations. Can be either flat or percentage-based. The target's magic resistance is unchanged.</li>
+                                 <li class="mb-2"><strong>Life steal:</strong> How much health you restore, as a percentage of the damage dealt by your basic attacks.</li>
+                              </ul>
+
+                              <h5 class="mt-3">Utility</h5>
+                              <ul>
+                                 <li class="mb-2"><strong>Cooldown haste [CH]:</strong> Reduces the cooldown of abilities.</li>
+                                 <li class="mb-2"><strong>Movement speed [MS]:</strong> How quickly you move across the map.</li>
+                                 <li class="mb-2"><strong>Saturation regen:</strong> The amount of hunger bars a player passively restores per 5 seconds.</li>                                 
+                              </ul>
 
                               <h4 class="mt-4">Classes</h4>
                               <div class="table-responsive">
@@ -440,9 +445,9 @@
 
                               <h4 class="mt-4">3 Kinds of Damage</h4>
                               <ul>
-                                 <li><strong>Physical:</strong> reduced by AR</li>
-                                 <li><strong>Magic:</strong> reduced by MR</li>
-                                 <li><strong>True:</strong> reduced by nothing</li>
+                                 <li><strong>Physical:</strong>  is innately mitigated by armor, a statistic that units possess.</li>
+                                 <li><strong>Magic:</strong>  is innately mitigated by magic resistance, a statistic that units possess.</li>
+                                 <li><strong>True:</strong> cannot be mitigated by any innate statistic.</li>
                               </ul>
 
                               <h4 class="mt-4">Armor and Magic Resist</h4>
@@ -472,7 +477,6 @@
                                  <li class="mb-2"><strong>Attack speed:</strong> <code>cooldown in ticks = 20 &divide; AS</code> (20 ticks = 1 second).</li>
                                  <li class="mb-2"><strong>Blocking:</strong> shield 50%, wooden sword 10%, stone 20%, iron or gold 28%, diamond or netherite 40%.</li>
                                  <li class="mb-2"><strong>Parry:</strong> right-click a sword just before a hit lands. The hit is cancelled, the attacker is knocked back, slowed and weakened, and you gain Strength.</li>
-                                 <li class="mb-2"><strong>PvP:</strong> both players must have PvP on, and league levels must be within 3 of each other.</li>
                                  <li class="mb-2"><strong>Monsters:</strong> physical damage only, with no crits, penetration or life steal.</li>
                                  <li class="mb-2"><strong>Fall damage:</strong> <code>blocks fallen &minus; 4</code> for falls of 4 or more blocks, plus a slow for every 10 blocks.</li>
                               </ul>
