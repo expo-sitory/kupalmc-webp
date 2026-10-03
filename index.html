@@ -390,8 +390,8 @@
 
                               <div class="alert alert-info mt-4" role="alert" style="background-color: rgba(224, 124, 255, 0.1); border: 1px solid rgba(224, 124, 255, 0.2); border-radius: 8px; color: #ddd;">
                                  <h5 class="alert-heading" style="color: var(--p-color);">Note: "is 1 AD equal to 1 Damage?"</h5>
-                                 <p class="mb-0">Nope, 1 AD &approx; 1/3 damage. The game divides your AD by 3 before using it, then the target's armor shrinks it more <code>(damage &divide; (1 + armor/100))</code>. 1 damage = half a heart.</p>
-                                 <p class="mb-0 mt-2 text-muted"><em>Example: 30 AD = 10 damage vs 0 armor, 5 vs 100 armor, ~3.3 vs 200 armor.</em></p>
+                                 <p class="mb-0">Nope, 7 AD = 1 damage. The game divides your AD by 7 before using it, then the target's armor shrinks it more <code>(damage &divide; (1 + armor/100))</code>. 1 damage = half a heart.</p>
+                                 <p class="mb-0 mt-2 text-muted"><em>Example: 70 AD = 10 damage vs 0 armor, 5 vs 100 armor, ~3.3 vs 200 armor.</em></p>
                               </div>
 
                               <h4 class="mt-4">Stats</h4>
@@ -429,7 +429,7 @@
                                        <tr><td><strong>Mage</strong></td><td>1</td><td>18</td><td>0</td><td>5</td><td>7</td><td>medium</td></tr>
                                        <tr><td><strong>Marksman</strong></td><td>4</td><td>2</td><td>0</td><td>5</td><td>8</td><td>fastest</td></tr>
                                        <tr><td><strong>Tank</strong></td><td>1</td><td>2</td><td>10</td><td>25</td><td>15</td><td>very slow</td></tr>
-                                       <tr><td><strong>Support</strong></td><td>11</td><td>10</td><td>4</td><td>5</td><td>5</td><td>slow</td></tr>
+                                       <tr><td><strong>Support</strong></td><td>10</td><td>10</td><td>4</td><td>5</td><td>5</td><td>slow</td></tr>
                                     </tbody>
                                  </table>
                               </div>
@@ -439,7 +439,7 @@
                                  <li><strong>Physical:</strong> from AD, shrunk by armor</li>
                                  <li><strong>Magic:</strong> from AP and rune powers, shrunk by MR</li>
                                  <li><strong>True:</strong> skips all defenses</li>
-                                 <li><strong>Adaptive:</strong> (many runes) turns magic if your items give more AP than AD, otherwise physical. It also grows with league level (&times;1.07 at the start, up to &times;2.75 at level 18).</li>
+                                 <li><strong>Adaptive:</strong> (many runes) turns magic if your items give more AP than AD, otherwise physical. It also grows with league level (&times;1.07 at the start, up to &times;1.90 at level 18).</li>
                               </ul>
 
                               <h4 class="mt-4">Armor and Magic Resist</h4>
@@ -450,17 +450,18 @@
 
                               <div class="card bg-dark border-secondary mb-4 mt-3">
                                  <div class="card-body py-3">
-                                    <h6 class="card-title mb-2" style="color: var(--p-color);">Balancer Values</h6>
+                                    <h6 class="card-title mb-2" style="color: var(--p-color);">Balancer Value</h6>
                                     <p class="card-text small mb-0 text-light">This number value may change, and if so it will get announced.<br>
-                                    Player AD/AP Divisor: <strong style="color: #ffaa00;">3.0</strong> <span class="mx-2">|</span> Player AR/MR Multiplier: <strong style="color: #ffaa00;">8.5</strong></p>
+                                    Player AD/AP Divisor: <strong style="color: #ffaa00;">7.0</strong></p>
                                  </div>
                               </div>
 
                               <h4 class="mt-4">Combat Mechanics</h4>
                               <ul>
                                  <li class="mb-2"><strong>Crits:</strong> A crit does 1.75&times; damage and ignores blocking. After a non-crit you get a small bonus (up to +2.5% chance) that fades as crits chain.</li>
-                                 <li class="mb-2"><strong>Attack Speed:</strong> <code>wait in ticks = 20 &divide; AS (20 ticks = 1 second)</code>. Waits with no items: Marksman ~1.2s, Assassin ~1.3s, Fighter ~1.6s, Mage ~1.8s, Support ~5s, Tank ~6.7s. Bows use the same timer.</li>
+                                 <li class="mb-2"><strong>Attack Speed:</strong> <code>wait in ticks = 20 &divide; AS (20 ticks = 1 second)</code>. Waits with no items: Marksman ~1.2s, Assassin ~1.3s, Fighter ~1.7s, Mage ~1.8s, Support ~5s, Tank ~6.7s. Bows use the same timer.</li>
                                  <li class="mb-2"><strong>Healing:</strong> Max HP = vanilla + class + item HP + shard HP + 4 per league level. Regen ticks every 5 seconds. <em class="text-warning">Food doesn't heal you.</em> Grievous Wounds cuts all healing, lifesteal and regen to 60%.</li>
+                                 <li class="mb-2"><strong>PvP:</strong> both players must have PvP on, and you can't hurt anyone more than 3 league levels away from you.</li>
                               </ul>
 
                               <h4 class="mt-4">Skills</h4>
