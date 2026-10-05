@@ -460,6 +460,17 @@
                                  <li><strong>Magic:</strong>  is innately mitigated by magic resistance, a statistic that units possess.</li>
                                  <li><strong>True:</strong> cannot be mitigated by any innate statistic.</li>
                               </ul>
+                              <p>True damage is affected by the League level of the player, which increases its flat value, as follows:</p>
+                              <div class="table-responsive">
+                                 <table class="table table-dark table-bordered text-center table-sm">
+                                    <thead style="background-color: #222;">
+                                       <tr><th style="color: var(--p-color);">League level</th><th>1-2</th><th>3-7</th><th>8-12</th><th>13-17</th><th>18</th></tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr><td><strong>True Damage Growth</strong></td><td>0</td><td>1.7</td><td>2.2</td><td>2.7</td><td>3.50</td></tr>
+                                    </tbody>
+                                 </table>
+                              </div>
                               <h4 class="mt-4">Adaptive Force</h4>
                               <p>Adaptive force is a invisible stat that is directly calculated on damage event. It grants the player either AD or AP, depending on the current amount of bonus attack damage and ability power of the player, as follows:</p>
                               <ul>
@@ -497,7 +508,7 @@
                                        <tr><th style="color: var(--p-color);">League level</th><th>1-2</th><th>3-7</th><th>8-12</th><th>13-17</th><th>18</th></tr>
                                     </thead>
                                     <tbody>
-                                       <tr><td><strong>Multiplier</strong></td><td>1.07</td><td>1.15</td><td>1.37</td><td>1.75</td><td>1.90</td></tr>
+                                       <tr><td><strong>Adaptive Damage Growth</strong></td><td>1.07</td><td>1.15</td><td>1.37</td><td>1.75</td><td>1.90</td></tr>
                                     </tbody>
                                  </table>
                               </div>
@@ -549,7 +560,13 @@
                                     <br>
                                     <li>Equation:</li>
                                     physicalDamage = effectiveAD * (100 / (100 + effectiveAR))
-                                    magicDamage = effectiveAP * (100 / (100 + effectiveMR))
+                                    <br>
+                                    magicDamage = (effectiveAP * 0.6) * (100 / (100 + effectiveMR))
+                                    <br>
+                                    <br>
+                                    totalPhysicalDamage = (trueDamage + physicalDamage) / balancerDivisor
+                                    <br>
+                                    totalMagicDamage = (trueDamage + magicDamage) / balancerDivisor
                                                                   
                                  </code>
                               </ul>
